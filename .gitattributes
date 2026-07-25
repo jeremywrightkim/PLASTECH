@@ -1,0 +1,13 @@
+# Keep line endings as LF in the repo and in the working tree,
+# so Windows checkouts don't produce whole-file diffs.
+* text=auto eol=lf
+
+# Binary assets — never touch
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary

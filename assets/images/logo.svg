@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44" role="img" aria-label="PLASTECH">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0b5cab"/><stop offset="1" stop-color="#12b0a0"/></linearGradient></defs>
+  <rect width="44" height="44" rx="11" fill="url(#g)"/>
+  <path d="M13 31V13h9a6 6 0 0 1 0 12h-4v6z" fill="#fff"/>
+  <circle cx="30" cy="14" r="3" fill="#8fd4ff"/>
+</svg>

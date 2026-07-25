@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>샘플요청 및 문의 | 고객센터 | PLASTECH</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
+</head>
+<body data-lang="ko" data-active="support/inquiry" data-root="../">
+<main id="main">
+  <div class="page-hero"><div class="wrap"><h1>샘플요청 및 문의</h1><p>제품 정보와 샘플을 요청해 주시면 신속히 답변드립니다.</p></div></div>
+  <nav data-breadcrumb></nav>
+  <div class="page-body"><div class="wrap"><div class="sub-layout">
+    <aside data-sidenav></aside>
+    <div class="page-content">
+      <h2>문의하기</h2>
+      <p class="lead">아래 양식을 작성해 주시면 담당자가 확인 후 연락드리겠습니다. (<span style="color:#e0483d">*</span> 필수 항목)</p>
+      <form data-validate data-success="문의가 접수되었습니다. 담당자가 곧 연락드리겠습니다. 감사합니다.">
+        <div class="form-grid">
+          <div class="field"><label>회사명 <span class="req">*</span></label>
+            <input type="text" name="company" required><span class="err">회사명을 입력해 주세요.</span></div>
+          <div class="field"><label>담당자명 <span class="req">*</span></label>
+            <input type="text" name="name" required><span class="err">담당자명을 입력해 주세요.</span></div>
+          <div class="field"><label>이메일 <span class="req">*</span></label>
+            <input type="email" name="email" required><span class="err">올바른 이메일을 입력해 주세요.</span></div>
+          <div class="field"><label>연락처</label>
+            <input type="tel" name="phone" placeholder="예) 031-000-0000"></div>
+          <div class="field full"><label>문의 유형 <span class="req">*</span></label>
+            <select name="type" required>
+              <option value="">선택해 주세요</option>
+              <option>제품 문의</option><option>샘플 요청</option>
+              <option>견적 요청</option><option>기타 문의</option>
+            </select><span class="err">문의 유형을 선택해 주세요.</span></div>
+          <div class="field full"><label>문의 내용 <span class="req">*</span></label>
+            <textarea name="message" required placeholder="관심 제품명, 수량, 용도 등을 함께 남겨 주시면 더욱 빠른 안내가 가능합니다."></textarea>
+            <span class="err">문의 내용을 입력해 주세요.</span></div>
+          <div class="field full">
+            <label class="agree"><input type="checkbox" name="agree" required> 개인정보 수집 및 이용에 동의합니다. <span class="req">*</span></label>
+            <span class="err">개인정보 수집에 동의해 주세요.</span></div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">문의 접수하기</button>
+          <span class="form-note">입력하신 정보는 문의 응대 목적으로만 사용됩니다.</span>
+        </div>
+      </form>
+    </div>
+  </div></div></div>
+</main>
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/include.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

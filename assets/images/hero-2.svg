@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c8577"/><stop offset="1" stop-color="#12b0a0"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g fill="#ffffff" opacity="0.08">
+    <circle cx="1312" cy="180" r="378"/>
+    <circle cx="240" cy="765" r="270"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="2" opacity="0.14">
+    <circle cx="480" cy="315" r="135"/>
+    <circle cx="992" cy="630" r="198"/>
+  </g>
+  <text x="50%" y="49%" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="82" font-weight="700">MATERIALS</text>
+  <text x="50%" y="49%" dy="82" text-anchor="middle" fill="#ffffff" opacity="0.8" font-family="Segoe UI, Arial, sans-serif" font-size="35">COATING / DISPLAY / BATTERY</text>
+</svg>

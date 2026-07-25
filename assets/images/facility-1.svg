@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b5cab"/><stop offset="1" stop-color="#12b0a0"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <g fill="#ffffff" opacity="0.08">
+    <circle cx="656" cy="90" r="189"/>
+    <circle cx="120" cy="382" r="135"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-width="2" opacity="0.14">
+    <circle cx="240" cy="158" r="68"/>
+    <circle cx="496" cy="315" r="99"/>
+  </g>
+  <text x="50%" y="49%" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="41" font-weight="700">WAREHOUSE</text>
+  <text x="50%" y="49%" dy="41" text-anchor="middle" fill="#ffffff" opacity="0.8" font-family="Segoe UI, Arial, sans-serif" font-size="17">Storage Facility</text>
+</svg>
