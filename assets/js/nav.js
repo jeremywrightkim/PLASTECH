@@ -7,6 +7,7 @@ window.PLASTECH_NAV = {
     util: { home: "홈", sitemap: "사이트맵", lang: "ENG" },
     menu: [
       { id: "company", label: "회사소개", children: [
+        { id: "company/about",    label: "기업개요",    href: "company/about.html" },
         { id: "company/ceo",      label: "CEO 인사말",  href: "company/ceo.html" },
         { id: "company/history",  label: "회사연혁",    href: "company/history.html" },
         { id: "company/location", label: "오시는 길",   href: "company/location.html" }
@@ -35,11 +36,14 @@ window.PLASTECH_NAV = {
       ]}
     ],
     footer: {
-      about: "PLASTECH는 코팅·페인트·전자소재·디스플레이·플라스틱 산업 전반에 걸쳐 고품질 화학 원료와 소재를 공급하는 무역 전문 기업입니다.",
-      addr: "경기도 안양시 동안구 시민대로 230 아크로타워 A동 505호",
-      tel: "031-000-0000", fax: "031-000-0001", email: "info@plastech.co.kr",
+      about: "플라스텍서비스(주)는 1998년부터 플라스틱 첨가제와 화학 소재를 공급해 온 전문 기업입니다. 난연제·열안정제·유동성 가공 조제부터 친환경 생분해 소재, 열 관리 소재까지 대응합니다.",
+      addr: "서울특별시 강남구 테헤란로 311, 1910호 (역삼동, 아남타워빌딩)",
+      tel: "02-501-5775", fax: "02-501-5749", email: "",
+      legalName: "플라스텍서비스(주)",
+      ceoLabel: "대표", ceo: "박상각",
+      bizLabel: "사업자등록번호", bizno: "220-86-47146",
       quickTitle: "바로가기", contactTitle: "오시는 길 · 연락처",
-      copyright: "COPYRIGHT © 2026 PLASTECH CO., LTD. ALL RIGHTS RESERVED."
+      copyright: "COPYRIGHT © 2026 플라스텍서비스(주) ALL RIGHTS RESERVED."
     }
   },
 
@@ -48,6 +52,7 @@ window.PLASTECH_NAV = {
     util: { home: "HOME", sitemap: "SITEMAP", lang: "KOR" },
     menu: [
       { id: "company", label: "Company", children: [
+        { id: "company/about",    label: "Overview",      href: "company/about.html" },
         { id: "company/ceo",      label: "CEO Message",   href: "company/ceo.html" },
         { id: "company/history",  label: "History",       href: "company/history.html" },
         { id: "company/location", label: "Location",      href: "company/location.html" }
@@ -76,11 +81,14 @@ window.PLASTECH_NAV = {
       ]}
     ],
     footer: {
-      about: "PLASTECH is a trading company supplying high-quality chemical raw materials across coating, paint, electronics, display and plastics industries.",
-      addr: "#505, Acro Tower A, 230 Simin-daero, Dongan-gu, Anyang-si, Gyeonggi-do, Korea",
-      tel: "+82-31-000-0000", fax: "+82-31-000-0001", email: "info@plastech.co.kr",
+      about: "PLASTECH Service (PTS) has supplied plastic additives and chemical materials since 1998 — from flame retardants, heat stabilizers and flow processing aids through to biodegradable and thermal management materials.",
+      addr: "#1910, Anam Tower, 311 Teheran-ro, Gangnam-gu, Seoul, Korea",
+      tel: "+82-2-501-5775", fax: "+82-2-501-5749", email: "",
+      legalName: "PLASTECH SERVICE CO., LTD.",
+      ceoLabel: "CEO", ceo: "Sang-gak Park",
+      bizLabel: "Business Reg. No.", bizno: "220-86-47146",
       quickTitle: "Quick Links", contactTitle: "Location · Contact",
-      copyright: "COPYRIGHT © 2026 PLASTECH CO., LTD. ALL RIGHTS RESERVED."
+      copyright: "COPYRIGHT © 2026 PLASTECH SERVICE CO., LTD. ALL RIGHTS RESERVED."
     }
   }
 };

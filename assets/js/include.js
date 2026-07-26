@@ -121,11 +121,13 @@
         '<div class="footer-col footer-contact"><h4>' + f.contactTitle + "</h4><ul>" +
           "<li>" + f.addr + "</li>" +
           "<li><b>TEL</b> " + f.tel + " &nbsp; <b>FAX</b> " + f.fax + "</li>" +
-          "<li><b>E-MAIL</b> " + f.email + "</li>" +
+          (f.email ? "<li><b>E-MAIL</b> " + f.email + "</li>" : "") +
+          "<li><b>" + f.ceoLabel + "</b> " + f.ceo +
+            " &nbsp; <b>" + f.bizLabel + "</b> " + f.bizno + "</li>" +
         "</ul></div>" +
       "</div>" +
       '<div class="footer-bottom"><span>' + f.copyright + "</span>" +
-        "<span>PLASTECH CO., LTD.</span></div>" +
+        "<span>" + f.legalName + "</span></div>" +
     "</div></footer>";
 
   // Inject
