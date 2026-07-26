@@ -9,6 +9,40 @@
   var lang = body.getAttribute("data-lang") || "ko";
   var active = body.getAttribute("data-active") || "home";
   var root = body.getAttribute("data-root") || "";
+
+  /* ===== REVIEW-ONLY BLOCK — DELETE THIS ENTIRE BLOCK AT REAL LAUNCH =====
+     Keeps the GitHub Pages review build out of search engines, and labels
+     every page so placeholder content is never mistaken for the real site.
+     Sits above the `if (!data) return;` guard on purpose, so it still applies
+     even if PLASTECH_NAV fails to load. */
+  (function () {
+    var head = document.head || document.getElementsByTagName("head")[0];
+    var rule = "noindex, nofollow, noarchive, nosnippet, noimageindex";
+    function meta(name) {
+      var m = document.createElement("meta");
+      m.setAttribute("name", name);
+      m.setAttribute("content", rule);
+      head.appendChild(m);
+    }
+    meta("robots");    // Google, Bing, Daum and every standards-compliant crawler
+    meta("Yeti");      // Naver
+    meta("NaverBot");  // Naver, legacy user agent
+
+    var bar = document.createElement("div");
+    bar.id = "review-banner";
+    bar.style.cssText =
+      "position:fixed;left:0;right:0;bottom:0;z-index:9999;" +
+      "background:#b3261e;color:#fff;text-align:center;padding:8px 12px;" +
+      "font-size:13px;font-weight:600;line-height:1.5;" +
+      "font-family:system-ui,-apple-system,'Malgun Gothic',sans-serif";
+    bar.appendChild(document.createTextNode(lang === "en"
+      ? "INTERNAL REVIEW BUILD — sample content and placeholder images. Not for public release."
+      : "내부 검토용 — 예시 콘텐츠와 임시 이미지가 포함되어 있습니다. 외부 공개용이 아닙니다."));
+    body.appendChild(bar);
+    body.style.paddingBottom = "44px";
+  })();
+  /* ===== END REVIEW-ONLY BLOCK ===== */
+
   var data = (window.PLASTECH_NAV || {})[lang];
   if (!data) return;
 
