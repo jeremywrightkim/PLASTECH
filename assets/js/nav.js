@@ -13,17 +13,10 @@ window.PLASTECH_NAV = {
         { id: "company/location", label: "오시는 길",   href: "company/location.html" }
       ]},
       { id: "products", label: "제품소개", children: [
-        { id: "products/solvent",   label: "SOLVENT TYPE",     href: "products/solvent.html" },
-        { id: "products/waterbase", label: "WATER BASE TYPE",  href: "products/waterbase.html" },
-        { id: "products/inorganic", label: "INORGANIC",        href: "products/inorganic.html" },
-        { id: "products/general",   label: "GENERAL CHEMICAL", href: "products/general.html" }
-      ]},
-      { id: "new", label: "신제품", children: [
-        { id: "new/cosmetic", label: "화장품 원료",  href: "new/cosmetic.html" },
-        { id: "new/oled",     label: "OLED",         href: "new/oled.html" },
-        { id: "new/battery",  label: "2차 전지",     href: "new/battery.html" },
-        { id: "new/eco",      label: "친환경 소재",  href: "new/eco.html" },
-        { id: "new/etc",      label: "기타",         href: "new/etc.html" }
+        { id: "products/overview",  label: "전체 품목",        href: "products/overview.html" },
+        { id: "products/additives", label: "플라스틱 첨가제",  href: "products/additives.html" },
+        { id: "products/resins",    label: "플라스틱 수지",    href: "products/resins.html" },
+        { id: "products/thermal",   label: "열 관리 소재",     href: "products/thermal.html" }
       ]},
       { id: "logistics", label: "물류/보관", children: [
         { id: "logistics/gallery",  label: "갤러리",       href: "logistics/gallery.html" },
@@ -58,17 +51,10 @@ window.PLASTECH_NAV = {
         { id: "company/location", label: "Location",      href: "company/location.html" }
       ]},
       { id: "products", label: "Products", children: [
-        { id: "products/solvent",   label: "SOLVENT TYPE",     href: "products/solvent.html" },
-        { id: "products/waterbase", label: "WATER BASE TYPE",  href: "products/waterbase.html" },
-        { id: "products/inorganic", label: "INORGANIC",        href: "products/inorganic.html" },
-        { id: "products/general",   label: "GENERAL CHEMICAL", href: "products/general.html" }
-      ]},
-      { id: "new", label: "New Products", children: [
-        { id: "new/cosmetic", label: "Cosmetic Materials", href: "new/cosmetic.html" },
-        { id: "new/oled",     label: "OLED",               href: "new/oled.html" },
-        { id: "new/battery",  label: "Secondary Battery",  href: "new/battery.html" },
-        { id: "new/eco",      label: "Eco-friendly",       href: "new/eco.html" },
-        { id: "new/etc",      label: "Others",             href: "new/etc.html" }
+        { id: "products/overview",  label: "All Items",           href: "products/overview.html" },
+        { id: "products/additives", label: "Plastic Additives",   href: "products/additives.html" },
+        { id: "products/resins",    label: "Plastic Resins",      href: "products/resins.html" },
+        { id: "products/thermal",   label: "Thermal Management",  href: "products/thermal.html" }
       ]},
       { id: "logistics", label: "Logistics", children: [
         { id: "logistics/gallery",  label: "Gallery",             href: "logistics/gallery.html" },

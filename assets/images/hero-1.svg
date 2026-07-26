@@ -1,17 +1,35 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
+  <!-- Slide 1 — Plastic additives. Background only: the headline lives in the
+       HTML so it stays bilingual and editable. All artwork is kept to the right
+       of the copy column so nothing sits behind the text. -->
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#073e75"/><stop offset="1" stop-color="#0b5cab"/></linearGradient>
+      <stop offset="0" stop-color="#062f5c"/><stop offset="1" stop-color="#0b5cab"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.74" cy="0.36" r="0.55">
+      <stop offset="0" stop-color="#8fd4ff" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#8fd4ff" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <g fill="#ffffff" opacity="0.08">
-    <circle cx="1312" cy="180" r="378"/>
-    <circle cx="240" cy="765" r="270"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- dispersed additive particles -->
+  <g fill="#ffffff" opacity="0.09">
+    <circle cx="1180" cy="250" r="152"/>
+    <circle cx="1424" cy="524" r="96"/>
+    <circle cx="1006" cy="622" r="64"/>
+    <circle cx="1330" cy="146" r="40"/>
   </g>
-  <g fill="none" stroke="#ffffff" stroke-width="2" opacity="0.14">
-    <circle cx="480" cy="315" r="135"/>
-    <circle cx="992" cy="630" r="198"/>
+  <g fill="none" stroke="#ffffff" stroke-width="2" opacity="0.15">
+    <circle cx="1180" cy="250" r="232"/>
+    <circle cx="1424" cy="524" r="162"/>
+    <circle cx="1006" cy="622" r="118"/>
   </g>
-  <text x="50%" y="49%" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="82" font-weight="700">PLASTECH</text>
-  <text x="50%" y="49%" dy="82" text-anchor="middle" fill="#ffffff" opacity="0.8" font-family="Segoe UI, Arial, sans-serif" font-size="35">GLOBAL CHEMICAL TRADING</text>
+  <g fill="#8fd4ff" opacity="0.55">
+    <circle cx="1180" cy="250" r="7"/>
+    <circle cx="1424" cy="524" r="7"/>
+    <circle cx="1006" cy="622" r="7"/>
+    <circle cx="1330" cy="146" r="6"/>
+  </g>
 </svg>

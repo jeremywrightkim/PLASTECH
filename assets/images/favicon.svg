@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"
+     role="img" aria-label="PTS">
+  <title>PTS</title>
+  <!-- Square mark for the browser tab. The wide lockup is illegible at 16px,
+       so the tab uses the PTS monogram only. -->
+  <rect width="64" height="64" rx="13" fill="#ffffff"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="11.5" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+  <text x="32" y="43" text-anchor="middle"
+        font-family="'Arial Black', 'Segoe UI Black', Arial, Helvetica, sans-serif"
+        font-size="28" font-weight="900" letter-spacing="0.5"
+        fill="#e03127" stroke="#e03127" stroke-width="0.7" stroke-linejoin="round">PTS</text>
+</svg>

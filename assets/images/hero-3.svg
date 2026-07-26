@@ -1,17 +1,35 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
+  <!-- Slide 3 — Thermal management. Background only; heat radiating from a chip
+       die, in the brand red, kept clear of the copy column. -->
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1b2733"/><stop offset="1" stop-color="#48586a"/></linearGradient>
+      <stop offset="0" stop-color="#0f2138"/><stop offset="1" stop-color="#7e2b21"/>
+    </linearGradient>
+    <radialGradient id="heat" cx="0.76" cy="0.5" r="0.46">
+      <stop offset="0" stop-color="#ffb27a" stop-opacity="0.42"/>
+      <stop offset="0.55" stop-color="#e8562f" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#e8562f" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <g fill="#ffffff" opacity="0.08">
-    <circle cx="1312" cy="180" r="378"/>
-    <circle cx="240" cy="765" r="270"/>
+  <rect width="1600" height="900" fill="url(#heat)"/>
+
+  <!-- radiating heat rings -->
+  <g fill="none" stroke="#ffd9b8" opacity="0.20">
+    <circle cx="1216" cy="450" r="150" stroke-width="2"/>
+    <circle cx="1216" cy="450" r="240" stroke-width="2"/>
+    <circle cx="1216" cy="450" r="330" stroke-width="1.5"/>
+    <circle cx="1216" cy="450" r="420" stroke-width="1"/>
   </g>
-  <g fill="none" stroke="#ffffff" stroke-width="2" opacity="0.14">
-    <circle cx="480" cy="315" r="135"/>
-    <circle cx="992" cy="630" r="198"/>
+
+  <!-- chip die + lid stack -->
+  <g opacity="0.9">
+    <rect x="1126" y="404" width="180" height="92" rx="10" fill="#ffffff" opacity="0.16"/>
+    <rect x="1150" y="424" width="132" height="52" rx="6" fill="#ffd9b8" opacity="0.55"/>
   </g>
-  <text x="50%" y="49%" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="82" font-weight="700">LOGISTICS</text>
-  <text x="50%" y="49%" dy="82" text-anchor="middle" fill="#ffffff" opacity="0.8" font-family="Segoe UI, Arial, sans-serif" font-size="35">SAFE STORAGE and DELIVERY</text>
+  <!-- package pins -->
+  <g stroke="#ffd9b8" stroke-width="4" opacity="0.35" stroke-linecap="round">
+    <path d="M1152 508 L1152 540"/><path d="M1188 508 L1188 540"/>
+    <path d="M1224 508 L1224 540"/><path d="M1260 508 L1260 540"/>
+  </g>
 </svg>

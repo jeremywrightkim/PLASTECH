@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80"
      role="img" aria-label="PTS — plastech service inc.">
   <title>PTS — plastech service inc.</title>
-  <!-- Lockup geometry follows the source artwork: 3.75:1 box, both lines flush
-       right, and the wordmark set wide enough to run well left of the PTS mark. -->
+  <!-- Reversed lockup for the dark footer. Same geometry as logo.svg; the red is
+       brightened and the wordmark goes white for contrast on #0f2138. -->
   <text x="292" y="49" text-anchor="end"
         font-family="'Arial Black', 'Segoe UI Black', Arial, Helvetica, sans-serif"
         font-size="52" font-weight="900" letter-spacing="2"
-        fill="#e03127" stroke="#e03127" stroke-width="0.6" stroke-linejoin="round">PTS</text>
+        fill="#f4574b" stroke="#f4574b" stroke-width="0.6" stroke-linejoin="round">PTS</text>
   <text x="292" y="70" text-anchor="end"
         font-family="Arial, Helvetica, 'Segoe UI', sans-serif"
         font-size="17.5" font-weight="400" letter-spacing="1.6"
-        fill="#2f4f9e">plastech service inc.</text>
+        fill="#ffffff">plastech service inc.</text>
 </svg>

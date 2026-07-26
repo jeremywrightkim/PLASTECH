@@ -83,6 +83,8 @@
   }).join("");
 
   var logo = siteRoot + "assets/images/logo.svg";
+  var logoWhite = siteRoot + "assets/images/logo-white.svg";
+  var brandAlt = "PLASTECH Service (PTS)";
 
   var header =
     '<a href="#main" class="skip-link">본문 바로가기</a>' +
@@ -94,8 +96,7 @@
       "</div></div>" +
       '<div class="header-main"><div class="wrap">' +
         '<a class="brand" href="' + homeHref + '">' +
-          '<img class="logo" src="' + logo + '" alt="PLASTECH">' +
-          '<span class="brand-text">PLASTECH<small>' + data.brandSub + "</small></span>" +
+          '<img class="logo" src="' + logo + '" alt="' + brandAlt + '">' +
         "</a>" +
         '<button class="nav-toggle" aria-label="menu" aria-expanded="false">' +
           "<span></span><span></span><span></span></button>" +
@@ -114,7 +115,7 @@
     '<footer class="site-footer"><div class="wrap">' +
       '<div class="footer-top">' +
         '<div class="footer-brand">' +
-          '<span class="brand-text">PLASTECH<small>' + data.brandSub + "</small></span>" +
+          '<img class="logo-footer" src="' + logoWhite + '" alt="' + brandAlt + '">' +
           "<p>" + f.about + "</p>" +
         "</div>" +
         '<div class="footer-col"><h4>' + f.quickTitle + "</h4>" + quick + "</div>" +
