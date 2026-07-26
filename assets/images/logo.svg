@@ -1,14 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 68" width="196" height="68"
      role="img" aria-label="PTS — plastech service inc.">
   <title>PTS — plastech service inc.</title>
-  <!-- Lockup geometry follows the source artwork: 3.75:1 box, both lines flush
-       right, and the wordmark set wide enough to run well left of the PTS mark. -->
-  <text x="292" y="49" text-anchor="end"
+  <!-- viewBox is trimmed to the letterforms so the mark sits flush left in the
+       header; earlier versions carried ~100px of empty canvas on the left.
+       textLength pins each line's width so the lockup renders identically
+       whether Arial Black, Segoe UI Black or a fallback face is available. -->
+  <text x="192" y="41" text-anchor="end" textLength="118" lengthAdjust="spacingAndGlyphs"
         font-family="'Arial Black', 'Segoe UI Black', Arial, Helvetica, sans-serif"
-        font-size="52" font-weight="900" letter-spacing="2"
+        font-size="52" font-weight="900"
         fill="#e03127" stroke="#e03127" stroke-width="0.6" stroke-linejoin="round">PTS</text>
-  <text x="292" y="70" text-anchor="end"
+  <text x="192" y="62" text-anchor="end" textLength="188" lengthAdjust="spacingAndGlyphs"
         font-family="Arial, Helvetica, 'Segoe UI', sans-serif"
-        font-size="17.5" font-weight="400" letter-spacing="1.6"
+        font-size="17.5" font-weight="400"
         fill="#2f4f9e">plastech service inc.</text>
 </svg>

@@ -78,7 +78,7 @@ p { margin: 0 0 1em; }
 
 .header-main .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand .logo { height: 46px; width: auto; }
+.brand .logo { height: 42px; width: auto; display: block; }
 .brand-text { font-weight: 800; font-size: 22px; letter-spacing: .5px; color: var(--brand-dark); }
 .brand-text small { display:block; font-size: 10.5px; font-weight: 600; letter-spacing: 2px; color: var(--ink-2); }
 
@@ -322,7 +322,7 @@ section { padding: 72px 0; }
    ========================================================================== */
 .site-footer { background: var(--bg-dark); color: #b9c8d8; padding: 54px 0 30px; margin-top: 20px; }
 .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-bottom: 34px; border-bottom: 1px solid rgba(255,255,255,.1); }
-.logo-footer { height: 50px; width: auto; display: block; }
+.logo-footer { height: 46px; width: auto; display: block; }
 .footer-brand .brand-text { color: #fff; }
 .footer-brand .brand-text small { color: #7f93a8; }
 .footer-brand p { font-size: 13.5px; margin-top: 14px; max-width: 340px; }
@@ -356,7 +356,12 @@ section { padding: 72px 0; }
   body.nav-open .nav-toggle span:nth-child(1){ transform: translateY(7.5px) rotate(45deg); }
   body.nav-open .nav-toggle span:nth-child(2){ opacity: 0; }
   body.nav-open .nav-toggle span:nth-child(3){ transform: translateY(-7.5px) rotate(-45deg); }
-  .nav-toggle { position: relative; z-index: 210; }
+  /* .gnb goes position:fixed here, leaving <nav> as a zero-width flex child.
+     space-between then split the row three ways and parked the hamburger in the
+     middle — take the empty wrapper out of flow so the row is logo | toggle. */
+  .header-main .wrap > nav { position: absolute; }
+  .nav-toggle { position: relative; z-index: 210; margin-left: auto; margin-right: 0; }
+  .brand { margin-left: 0; }
   .gnb > li > a { height: auto; padding: 16px 26px; justify-content: space-between; border-bottom: 1px solid var(--line); }
   .gnb > li > a::after { display: none; }
   .submenu {
@@ -365,9 +370,21 @@ section { padding: 72px 0; }
     background: var(--bg-soft);
   }
   .gnb > li.open .submenu { max-height: 500px; }
+  /* The desktop dropdown rule `.gnb > li:hover .submenu` lives outside this
+     media query and outranks a bare `.submenu` (0,3,1 vs 0,1,0), so hovering
+     re-applied translateX(-50%) and pushed the panel's text off-screen.
+     Match its specificity here to keep the accordion in place. */
+  .gnb > li:hover .submenu { transform: none; }
   .submenu a { padding: 12px 40px; }
   .nav-scrim { position: fixed; inset: 0; background: rgba(0,0,0,.4); opacity: 0; visibility: hidden; transition: .3s; z-index: 150; }
   body.nav-open .nav-scrim { opacity: 1; visibility: visible; }
+  /* .site-header is position:sticky with z-index:100, so it forms a stacking
+     context — the z-index:200 on .gnb only competes *inside* the header, and at
+     root level the scrim (150) beat the header (100) and covered the open menu,
+     swallowing every tap. Lift the whole header above the scrim while open. */
+  body.nav-open .site-header { z-index: 160; }
+  /* stop the page behind the drawer from scrolling */
+  body.nav-open { overflow: hidden; }
   .quick-grid, .prod-grid, .feature-grid, .gallery-grid, .form-grid, .footer-top, .sitemap-grid { grid-template-columns: 1fr; }
   section { padding: 52px 0; }
   .footer-bottom { justify-content: center; text-align: center; }

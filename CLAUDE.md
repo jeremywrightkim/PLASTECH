@@ -21,9 +21,27 @@ python -m http.server 8000     # then http://localhost:8000/
 Every page's HTML contains only `<main id="main">`. The header, footer, breadcrumb and side nav are generated at runtime. Script order matters and is identical on every page:
 
 ```html
-<script src="../assets/js/nav.js"></script>      <!-- data -->
-<script src="../assets/js/include.js"></script>  <!-- injects header/footer/breadcrumb/sidenav -->
-<script src="../assets/js/main.js"></script>     <!-- interactions; assumes chrome exists -->
+<script src="../assets/js/nav.js?v=20260726"></script>      <!-- data -->
+<script src="../assets/js/include.js?v=20260726"></script>  <!-- injects header/footer/breadcrumb/sidenav -->
+<script src="../assets/js/main.js?v=20260726"></script>     <!-- interactions; assumes chrome exists -->
+```
+
+### Bump `?v=` on every deploy
+
+`style.css`, the three scripts and `favicon.svg` all carry a `?v=YYYYMMDD` token, and
+`include.js` repeats it in `ASSET_V` for the runtime-injected logos. GitHub Pages serves
+everything with `Cache-Control: max-age=600`, and because the entire header, footer and
+menu are built by the scripts, a cached `nav.js`/`include.js` renders the *whole previous
+site* even when the HTML is fresh — the change looks like it never deployed.
+
+Bump the token everywhere in one pass before pushing:
+
+```powershell
+$new = '20260801'
+Get-ChildItem . -Recurse -Include *.html,include.js | ForEach-Object {
+  (Get-Content $_ -Raw) -replace '\?v=\d{8}', "?v=$new" |
+    Set-Content $_ -Encoding utf8 -NoNewline
+}
 ```
 
 - [assets/js/nav.js](assets/js/nav.js) — `window.PLASTECH_NAV`, the **single source of truth** for the menu tree, footer text and contact details, in both `ko` and `en`. Adding, renaming or reordering a page means editing this file; nothing else knows the menu.
