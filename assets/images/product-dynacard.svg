@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" preserveAspectRatio="xMidYMid slice">
+  <!-- DYNACARD Diamond-Cu heat spreader, 3:4 portrait to match .spec-split .visual.
+       A lidded spreader plate with a machined rim and the official DYNAC wordmark
+       etched on the face, matching the supplier's product photography.
+
+       The plate itself is placeholder artwork in our own palette; swap it for real
+       product photography when licensed images are available. The wordmark paths
+       are the supplier's own — see the note above the <defs> that holds them. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f8fc"/><stop offset="1" stop-color="#dde8f4"/>
+    </linearGradient>
+    <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9edf1"/>
+      <stop offset="0.45" stop-color="#c3ccd6"/>
+      <stop offset="1" stop-color="#9fabb9"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#cdd6df"/><stop offset="1" stop-color="#aab6c3"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b5cab"/><stop offset="1" stop-color="#062f5c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="800" fill="url(#bg)"/>
+
+  <!-- spreader plate: drop shadow, outer body, machined rim, recessed face -->
+  <rect x="86" y="176" width="428" height="428" rx="14" fill="#8f9dab" opacity="0.35"/>
+  <rect x="78" y="166" width="428" height="428" rx="14" fill="url(#plate)"/>
+  <rect x="106" y="194" width="372" height="372" rx="8" fill="none" stroke="#8f9dab" stroke-width="3"/>
+  <rect x="118" y="206" width="348" height="348" rx="6" fill="url(#inner)"/>
+
+  <!-- brushed finish -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.26">
+    <path d="M124 240 H460"/><path d="M124 276 H460"/><path d="M124 312 H460"/>
+    <path d="M124 348 H460"/><path d="M124 384 H460"/><path d="M124 420 H460"/>
+    <path d="M124 456 H460"/><path d="M124 492 H460"/><path d="M124 528 H460"/>
+  </g>
+
+  <!-- ===== DYNAC wordmark etched on the face =====
+       Letterform paths are the official ones, lifted verbatim from
+       brand-dynac.svg (dynacltd.com) and recoloured to read as darkened metal
+       rather than printed ink. The falcon is omitted deliberately: the supplier's
+       product photography shows the wordmark alone on the plate.
+       If the official logo is ever revised, re-copy these five paths. -->
+  <defs>
+  <g id="etch">
+    <path d="M57.96,8.22c0.83,0,10.28,0.14,11.41,0.42c2.23,0.56,4.04,1.54,5.43,2.93c1.93,1.93,2.9,4.57,2.9,7.91s-0.98,5.99-2.93,7.94c-1.39,1.39-3.2,2.36-5.43,2.93c-0.54,0.13-1.06,0.23-1.53,0.3c-0.48,0.07-0.93,0.1-1.37,0.1h-2.82v-5.63h2.82c1.37-0.17,2.31-0.4,2.82-0.7c1.88-0.92,2.82-2.56,2.82-4.93c0-1.69-0.49-3.02-1.46-4c-0.68-0.68-1.59-1.15-2.73-1.44c-0.41-0.13-0.89-0.2-1.44-0.2H55.19L57.96,8.22L57.96,8.22z"/>
+    <path d="M101.83,8.22v2.82c-0.06,0.41-0.11,0.82-0.17,1.22c-0.06,0.4-0.1,0.81-0.14,1.22c-0.43,1.95-1.15,3.59-2.17,4.93c-1.46,1.9-3.45,3.1-5.97,3.6v8.73h-5.63v-8.73c-1.78-0.38-3.28-1.07-4.5-2.08c-1.03-0.86-1.88-1.95-2.53-3.27h9.85c2.36,0,4.01-0.94,4.93-2.81c0.3-0.51,0.53-1.45,0.7-2.82V8.21L101.83,8.22L101.83,8.22z"/>
+    <path d="M126.63,30.74h-6.33l-8.45-16.89h-7.74l2.82-5.63h8.45l5.63,11.26L126.63,30.74L126.63,30.74z M110.49,30.74V16.98h-6.38v13.76H110.49z"/>
+    <path d="M129.44,13.85l2.82-5.63h11.26l11.26,22.52h-6.33L140,13.85C140,13.85,129.44,13.85,129.44,13.85z M142.88,24.09l-2.82-5.63h-10.63v12.28h5.63v-6.65h7.81L142.88,24.09z"/>
+    <path d="M154.07,13.85l2.82-5.63h20.43v5.63H154.07L154.07,13.85z M154.07,16.66v2.82c0.07,0.49,0.15,0.98,0.21,1.46c0.07,0.49,0.14,0.98,0.21,1.46c0.56,2.23,1.54,4.04,2.93,5.43c1.93,1.93,4.57,2.9,7.91,2.9h11.42V25.1h-11.42c-1.37-0.17-2.31-0.4-2.82-0.7c-1.88-0.92-2.82-2.56-2.82-4.93v-2.82h-5.63L154.07,16.66z"/>
+    <!-- the three chamfer accents that the brand file fills with a gradient -->
+    <polygon points="60.81,24.56 55.18,30.74 55.18,16.66"/>
+    <polygon points="86.49,8.22 86.49,13.85 79.31,13.85 82.12,8.22"/>
+    <polygon points="126.64,8.22 126.64,13.85 119.96,13.85 122.77,8.22"/>
+  </g>
+  </defs>
+  <!-- engraved: a light copy sits 2px below the dark face -->
+  <use href="#etch" transform="translate(53.9,342.2) scale(2.05)" fill="#eef2f6" opacity="0.6"/>
+  <use href="#etch" transform="translate(53.9,340.2) scale(2.05)" fill="#39454f"/>
+
+  <text x="292" y="452" text-anchor="middle" font-family="Segoe UI, Malgun Gothic, Arial, sans-serif"
+        font-size="18" font-weight="600" letter-spacing="5" fill="#6b7887">DIAMOND-Cu</text>
+
+  <!-- caption band -->
+  <rect x="0" y="656" width="600" height="88" fill="url(#band)"/>
+  <text x="40" y="700" font-family="Segoe UI, Malgun Gothic, sans-serif"
+        font-size="24" font-weight="800" fill="#ffffff" letter-spacing="1">Heat Spreader</text>
+  <text x="40" y="728" font-family="Segoe UI, Malgun Gothic, sans-serif"
+        font-size="15" font-weight="600" fill="#8fd4ff" letter-spacing="1">Diamond-Cu composite · Lid</text>
+</svg>

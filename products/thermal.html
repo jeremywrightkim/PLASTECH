@@ -22,12 +22,40 @@
         <span class="tag">MAIN ITEM</span>
         <h3>DYNACARD Diamond-Cu</h3>
         <p class="maker">Dynacard · 다이아몬드-구리 복합 고방열 소재</p>
+        <p class="claim">고출력 칩 냉각의 새로운 기준</p>
         <p>다이아몬드와 구리를 복합해 <b>800 ~ 950 W/(m·K)</b>의 열전도율을 확보한 열관리 소재의 메인 강조 품목입니다.
            구리 대비 크게 높은 열확산 성능과 반도체 소자에 가까운 <b>낮은 열팽창계수(5 ~ 8 ppm/K)</b>를 동시에 갖춰,
            고열유속 칩 패키지의 히트 스프레더(Lid) 용도에서 반복 열사이클 신뢰성에 유리합니다.</p>
       </div>
 
-      <div class="feature-grid" style="margin-top:30px">
+      <div class="spec-split" style="margin-top:34px">
+        <div class="visual"><img src="../assets/images/product-dynacard.svg" alt="DYNACARD Diamond-Cu 히트 스프레더"></div>
+        <div class="copy">
+          <img class="maker-mark" src="../assets/images/brand-dynac.svg" alt="DYNAC">
+          <span class="eyebrow">제품 개요</span>
+          <h4>All-Diamond-Metal 히트 스프레더</h4>
+          <p>계면 접합과 용접 신뢰성 등 다이아몬드-금속 복합재의 핵심 난제를 해결한 제품으로,
+             AI 서버와 고성능 컴퓨팅(HPC) 분야의 고출력 칩 냉각에 대응합니다. 전 제품 대만 생산입니다.</p>
+          <!-- 납기·가격·성능·효율은 바로 아래 .stat-row가 수치로 보여준다. 여기에 목록으로
+               다시 적지 말 것. -->
+          <p style="margin-top:20px">
+            <a class="btn outline" href="../support/contact.html">기술 자료 · 샘플 문의 &rarr;</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><span class="n">600<small> W/(m·K) 이상</small></span>
+          <span class="k">열전도율</span></div>
+        <div class="stat"><span class="n">40<small>%</small></span>
+          <span class="k">냉각 에너지 절감</span></div>
+        <div class="stat"><span class="n">1/2</span>
+          <span class="k">경쟁사 대비 납기</span></div>
+        <div class="stat"><span class="n">40~50<small>% ↓</small></span>
+          <span class="k">해외 브랜드 대비 가격</span></div>
+      </div>
+
+      <div class="feature-grid" style="margin-top:34px">
         <div class="feature"><div class="ico">&#9832;</div><h4>고열전도</h4>
           <p>발열 밀도가 높아지는 전력 소자와 반도체 패키지의 열을 빠르게 분산.</p></div>
         <div class="feature"><div class="ico">&#9670;</div><h4>열팽창 정합</h4>
@@ -42,7 +70,62 @@
          구리 대비 크게 높은 열전도율로 열을 확산시키는 동시에
          반도체 소자에 가까운 낮은 열팽창계수(CTE)를 가져 반복 열사이클에서의 계면 신뢰성에 유리합니다.</p>
 
-      <h4 style="margin-top:22px">성능 파라미터</h4>
+      <figure class="diagram">
+        <svg viewBox="0 0 760 330" role="img" aria-labelledby="stack-title stack-desc">
+          <title id="stack-title">칩 패키지 방열 경로 단면도</title>
+          <desc id="stack-desc">아래에서 위로 PCB, 서브스트레이트, Die, TIM1, Diamond-Cu Lid, TIM2, Cold plate 순으로 쌓인 구조. 열은 Die에서 발생해 Cold plate로 빠져나갑니다.</desc>
+
+          <!-- Cold plate -->
+          <rect x="118" y="34" width="524" height="46" rx="5" fill="#cfdcea" stroke="#9fb3c8"/>
+          <text x="150" y="63" font-size="17" font-weight="600" fill="#3d4b5a">Cold plate</text>
+          <g stroke="#0b5cab" stroke-width="3" fill="none">
+            <path d="M360 57 H586"/><path d="M578 49 L590 57 L578 65"/>
+          </g>
+
+          <!-- TIM2 -->
+          <rect x="140" y="82" width="480" height="15" fill="#e0483d"/>
+          <text x="636" y="95" font-size="14" font-weight="600" fill="#b3261e">TIM2</text>
+
+          <!-- Lid (Diamond-Cu): cap spanning the package, legs down to the PCB -->
+          <path d="M140 97 H620 V137 H594 V246 H566 V137 H194 V246 H166 V137 H140 Z" fill="#0b5cab"/>
+          <text x="380" y="124" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Lid</text>
+
+          <!-- Diamond-Cu callout -->
+          <text x="8" y="180" font-size="15" font-weight="800" fill="#b3261e">Diamond-Cu</text>
+          <g stroke="#b3261e" stroke-width="2.5" fill="none">
+            <path d="M112 174 H160"/><path d="M120 166 L110 174 L120 182"/>
+          </g>
+
+          <!-- TIM1 -->
+          <rect x="298" y="137" width="164" height="15" fill="#e0483d"/>
+          <text x="470" y="150" font-size="14" font-weight="600" fill="#b3261e">TIM1</text>
+
+          <!-- Die -->
+          <rect x="290" y="152" width="180" height="58" fill="#8794a6"/>
+          <text x="380" y="188" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Die</text>
+
+          <!-- substrate + solder balls -->
+          <rect x="262" y="210" width="236" height="16" fill="#b9c4d1"/>
+          <g fill="#6b7887">
+            <circle cx="286" cy="234" r="6"/><circle cx="316" cy="234" r="6"/>
+            <circle cx="346" cy="234" r="6"/><circle cx="376" cy="234" r="6"/>
+            <circle cx="406" cy="234" r="6"/><circle cx="436" cy="234" r="6"/>
+            <circle cx="466" cy="234" r="6"/>
+          </g>
+
+          <!-- PCB -->
+          <rect x="96" y="246" width="568" height="32" rx="4" fill="#4a9c5a"/>
+          <text x="380" y="268" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">PCB</text>
+
+          <!-- heat path caption -->
+          <text x="380" y="308" text-anchor="middle" font-size="14" fill="#5b7086">
+            Die → TIM1 → Lid (Diamond-Cu) → TIM2 → Cold plate
+          </text>
+        </svg>
+        <figcaption>Diamond-Cu는 칩 패키지의 Lid(히트 스프레더) 위치에 적용됩니다.</figcaption>
+      </figure>
+
+      <h4 style="margin-top:26px">성능 파라미터</h4>
       <div class="table-scroll">
       <table class="tbl">
         <thead><tr><th style="width:34%">항목</th><th>Diamond-Cu</th></tr></thead>
@@ -54,18 +137,11 @@
       </table>
       </div>
 
-      <h4 style="margin-top:22px">적용 분야</h4>
-      <ul style="color:var(--ink-2);padding-left:20px;list-style:disc;line-height:1.9">
-        <li>고열유속(High Heat-Flux) 칩 패키지 열 관리</li>
-        <li>전력 소자용 히트싱크</li>
-        <li>5G 통신 장비 · CPU / GPU · 항공우주 · 레이저 · 친환경차(NEV) 전력 소자</li>
-      </ul>
-
-      <div class="table-scroll" style="margin-top:18px">
+      <div class="table-scroll" style="margin-top:26px">
       <table class="tbl">
-        <thead><tr><th style="width:26%">품목</th><th style="width:22%">제조사</th><th>주요 용도</th></tr></thead>
+        <thead><tr><th style="width:18%">상표 (Brand)</th><th style="width:30%">주요 품목 (Grade)</th><th style="width:20%">제조사</th><th>비고</th></tr></thead>
         <tbody>
-          <tr><td><span class="main-item">Diamond-Cu</span></td><td>Dynacard</td><td>반도체 · 전력 소자 방열, 히트 스프레더(Lid)</td></tr>
+          <tr><td><span class="main-item">DYNACARD</span></td><td>Diamond-Cu</td><td>Dynacard (Taiwan)</td><td>반도체 · 전력 소자 방열, 히트 스프레더(Lid)</td></tr>
         </tbody>
       </table>
       </div>
@@ -76,11 +152,21 @@
          데이터센터·전장 등 고발열 전자기기의 구조 부품에 적용됩니다.</p>
       <div class="table-scroll">
       <table class="tbl">
-        <thead><tr><th style="width:26%">품목</th><th style="width:22%">제조사</th><th>주요 용도</th></tr></thead>
+        <thead><tr><th style="width:18%">상표 (Brand)</th><th style="width:30%">주요 품목 (Grade)</th><th style="width:20%">제조사</th><th>비고</th></tr></thead>
         <tbody>
-          <tr><td>GR03 Series (고강도 PPS)</td><td>G-FAM</td><td>AI 서버 쿨링팬 등 고온·고속 회전 부품</td></tr>
+          <tr><td>G-FAM</td><td>GR03 Series (고강도 PPS)</td><td>G-FAM</td><td>AI 서버 쿨링팬 등 고온·고속 회전 부품</td></tr>
         </tbody>
       </table>
+      </div>
+
+      <h3 style="margin-top:34px">적용 분야 &nbsp;<span style="font-weight:400;font-size:15px;color:var(--ink-2)">Applications</span></h3>
+      <p>고열유속(High Heat-Flux) 칩 패키지의 열 관리와 전력 소자용 히트싱크 용도에 적합합니다.</p>
+      <div class="app-grid">
+        <div class="app"><b>5G</b><span>통신 기지국 · 네트워크 장비</span></div>
+        <div class="app"><b>CPU / GPU</b><span>AI 서버 · 고성능 컴퓨팅</span></div>
+        <div class="app"><b>항공우주</b><span>고신뢰성 전자 장비</span></div>
+        <div class="app"><b>레이저</b><span>고출력 광원 방열</span></div>
+        <div class="app"><b>NEV 전력 소자</b><span>친환경차 파워 모듈</span></div>
       </div>
 
       <p style="color:var(--ink-2);font-size:14px;margin-top:22px">

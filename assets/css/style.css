@@ -195,6 +195,13 @@ section { padding: 72px 0; }
 
 /* two column: notice + facility */
 .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 46px; align-items: start; }
+/* Equal-weight pair. The base .split is 1.1fr 1fr and align-items:start, which
+   suits a main/secondary pairing but makes two peer product cards look
+   mismatched in both width and height. */
+.split.even { grid-template-columns: 1fr 1fr; align-items: stretch; }
+.split.even > div { display: flex; flex-direction: column; }
+.split.even .facility-card { flex: 1; }
+.split.even .facility-card .body { flex: 1; }
 .block-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
 .block-head h3 { font-size: 22px; }
 .block-head a { color: var(--brand); font-size: 14px; font-weight: 600; }
@@ -207,6 +214,11 @@ section { padding: 72px 0; }
 .notice-list .d { color: var(--ink-2); font-size: 13px; flex: none; }
 
 .facility-card { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); background:#fff; }
+/* Linked cards need a block-level box; flex so the body can absorb slack when
+   the pair is height-matched. Set here rather than inline, so .split.even can
+   override display without fighting a style attribute. */
+a.facility-card { display: flex; flex-direction: column; color: inherit; transition: box-shadow .25s, transform .25s; }
+a.facility-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
 .facility-card img { aspect-ratio: 16/9; object-fit: cover; width: 100%; }
 .facility-card .body { padding: 22px 24px; }
 .facility-card h4 { font-size: 19px; margin-bottom: 6px; }
@@ -314,6 +326,40 @@ section { padding: 72px 0; }
 }
 .spec-split h4 { font-size: 23px; line-height: 1.4; color: var(--brand-dark); margin-bottom: 14px; }
 .spec-split .copy > p { color: var(--ink-2); line-height: 1.85; }
+/* Supplier mark above the heading — height-constrained so swapping in the
+   official logo at any aspect ratio can't disturb the layout. */
+.maker-mark { display: block; height: 34px; width: auto; margin-bottom: 14px; }
+
+/* Key figures strip — the headline numbers for a product, pulled out of the
+   spec table so they land before the reader reaches the detail. */
+/* auto-fit rather than a fixed 4 columns: the two product pages carry different
+   numbers of figures, and this also removes the need for breakpoint overrides. */
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-top: 24px; }
+.stat {
+  border: 1px solid var(--line); border-top: 3px solid var(--brand);
+  border-radius: var(--radius); padding: 22px 18px; background: #fff; text-align: center;
+}
+/* .n also carries text figures ("Albemarle"), so allow it to wrap and break
+   rather than overflow the tile. */
+.stat .n { display: block; font-size: 28px; font-weight: 800; color: var(--brand); line-height: 1.15; overflow-wrap: anywhere; }
+.stat .n small { font-size: 15px; font-weight: 700; letter-spacing: 0; }
+.stat .k { display: block; margin-top: 8px; font-size: 13px; color: var(--ink-2); line-height: 1.55; }
+
+/* Application tiles — deliberately icon-free; the labels are the content and
+   glyph fallbacks differ too much across the Korean system fonts. */
+.app-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 14px; margin-top: 18px; }
+.app {
+  border: 1px solid var(--line); border-top: 3px solid var(--brand);
+  border-radius: var(--radius); padding: 18px 14px; background: #fff;
+}
+.app b { display: block; font-size: 15px; }
+.app span { display: block; font-size: 12.5px; color: var(--ink-2); margin-top: 6px; line-height: 1.5; }
+
+/* Inline schematic (package stack, process flow …). The SVG scales to the
+   column; keep viewBox-driven sizing so it stays sharp at any width. */
+.diagram { border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-soft); padding: 22px 20px; margin-top: 18px; }
+.diagram svg { display: block; width: 100%; height: auto; }
+.diagram figcaption { margin-top: 14px; font-size: 13.5px; color: var(--ink-2); text-align: center; }
 
 /* Benefit list — flat rows, no card chrome, so it reads as a spec sheet. */
 .bullet-list { margin: 16px 0 0; padding: 0; list-style: none; }
@@ -403,10 +449,13 @@ section { padding: 72px 0; }
    Responsive
    ========================================================================== */
 @media (max-width: 980px) {
-  .split, .ceo, .sub-layout { grid-template-columns: 1fr; }
+  /* .split.even is (0,2,0) and would outrank a bare .split here, keeping two
+     columns on tablets — name it explicitly. */
+  .split, .split.even, .ceo, .sub-layout { grid-template-columns: 1fr; }
   /* Cap the visual so it doesn't blow up to full width once stacked. */
   .spec-split { grid-template-columns: 1fr; }
   .spec-split .visual { max-width: 320px; }
+  .app-grid { grid-template-columns: repeat(3,1fr); }
   .quick-grid, .prod-grid { grid-template-columns: repeat(2,1fr); }
   .feature-grid { grid-template-columns: repeat(2,1fr); }
   .sitemap-grid { grid-template-columns: repeat(2,1fr); }
@@ -455,6 +504,11 @@ section { padding: 72px 0; }
   /* stop the page behind the drawer from scrolling */
   body.nav-open { overflow: hidden; }
   .quick-grid, .prod-grid, .feature-grid, .form-grid, .footer-top, .sitemap-grid { grid-template-columns: 1fr; }
+  .app-grid { grid-template-columns: repeat(2,1fr); }
+  /* The stack diagram has fixed label sizes in its viewBox — let it scroll
+     rather than shrink the type to nothing on a phone. */
+  .diagram { overflow-x: auto; padding: 18px 14px; }
+  .diagram svg { min-width: 560px; }
   section { padding: 52px 0; }
   .footer-bottom { justify-content: center; text-align: center; }
   /* Copy spans the full width on phones, so the scrim runs top-to-bottom

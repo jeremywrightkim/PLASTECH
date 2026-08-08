@@ -1,17 +1,50 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450" preserveAspectRatio="xMidYMid slice">
+  <!-- PRODUCT GRID 4/4 — 열관리 소재 / Thermal Management.
+       Motif: a chip package in section — PCB, die, and the Diamond-Cu lid on top —
+       with heat spreading outward from the lid. Same stack the thermal page draws in
+       full detail, reduced to a card-sized silhouette. Heat red, matching hero-3.
+       Text-free by design; see product-1.svg for the reasoning. -->
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#334155"/><stop offset="1" stop-color="#48586a"/></linearGradient>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2138"/><stop offset="1" stop-color="#7e2b21"/>
+    </linearGradient>
+    <radialGradient id="heat4" cx="0.5" cy="0.44" r="0.5">
+      <stop offset="0" stop-color="#ffb27a" stop-opacity="0.4"/>
+      <stop offset="0.6" stop-color="#e8562f" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#e8562f" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="600" height="450" fill="url(#bg)"/>
-  <g fill="#ffffff" opacity="0.08">
-    <circle cx="492" cy="90" r="189"/>
-    <circle cx="90" cy="382" r="135"/>
+  <rect width="600" height="450" fill="url(#bg4)"/>
+  <rect width="600" height="450" fill="url(#heat4)"/>
+
+  <g fill="#ffffff" opacity="0.06">
+    <circle cx="500" cy="80" r="150"/><circle cx="80" cy="380" r="110"/>
   </g>
-  <g fill="none" stroke="#ffffff" stroke-width="2" opacity="0.14">
-    <circle cx="180" cy="158" r="68"/>
-    <circle cx="372" cy="315" r="99"/>
+
+  <!-- heat spreading outward from the lid -->
+  <g fill="none" stroke="#ffd9b8" opacity="0.24">
+    <circle cx="300" cy="238" r="112" stroke-width="2.5"/>
+    <circle cx="300" cy="238" r="162" stroke-width="2"/>
+    <circle cx="300" cy="238" r="212" stroke-width="1.5"/>
   </g>
-  <text x="50%" y="49%" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="41" font-weight="700">PRODUCT</text>
-  <text x="50%" y="49%" dy="41" text-anchor="middle" fill="#ffffff" opacity="0.8" font-family="Segoe UI, Arial, sans-serif" font-size="17">Sample 4</text>
+
+  <!-- rising heat arrows -->
+  <g stroke="#ffd9b8" stroke-width="4" opacity="0.42" stroke-linecap="round" fill="none">
+    <path d="M232 152 V108"/><path d="M224 120 L232 106 L240 120"/>
+    <path d="M300 140 V92"/><path d="M292 104 L300 90 L308 104"/>
+    <path d="M368 152 V108"/><path d="M360 120 L368 106 L376 120"/>
+  </g>
+
+  <!-- package stack: lid (Diamond-Cu) over die over PCB -->
+  <rect x="196" y="176" width="208" height="44" rx="6" fill="#ffd9b8" opacity="0.7"/>
+  <rect x="196" y="220" width="18" height="60" fill="#ffd9b8" opacity="0.45"/>
+  <rect x="386" y="220" width="18" height="60" fill="#ffd9b8" opacity="0.45"/>
+  <rect x="252" y="228" width="96" height="40" rx="4" fill="#ffffff" opacity="0.34"/>
+  <rect x="160" y="280" width="280" height="26" rx="5" fill="#ffffff" opacity="0.22"/>
+
+  <!-- package pins -->
+  <g stroke="#ffd9b8" stroke-width="4" opacity="0.38" stroke-linecap="round">
+    <path d="M216 306 V336"/><path d="M258 306 V336"/><path d="M300 306 V336"/>
+    <path d="M342 306 V336"/><path d="M384 306 V336"/>
+  </g>
 </svg>

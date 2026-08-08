@@ -22,13 +22,42 @@
         <span class="tag">MAIN ITEM</span>
         <h3>DYNACARD Diamond-Cu</h3>
         <p class="maker">Dynacard · diamond–copper composite heat spreader</p>
+        <p class="claim">A new era in high-power chip cooling</p>
         <p>Our headline thermal management item: a diamond–copper composite reaching
            <b>800 – 950 W/(m·K)</b> thermal conductivity. It spreads heat far more effectively than copper while
            keeping a <b>low CTE of 5 – 8 ppm/K</b> — close to the die — which favours interface reliability under
            repeated thermal cycling in high heat-flux chip package lids.</p>
       </div>
 
-      <div class="feature-grid" style="margin-top:30px">
+      <div class="spec-split" style="margin-top:34px">
+        <div class="visual"><img src="../../assets/images/product-dynacard.svg" alt="DYNACARD Diamond-Cu heat spreader"></div>
+        <div class="copy">
+          <img class="maker-mark" src="../../assets/images/brand-dynac.svg" alt="DYNAC">
+          <span class="eyebrow">PRODUCT OVERVIEW</span>
+          <h4>All-diamond-metal heat spreader</h4>
+          <p>Built on solved fundamentals — interface bonding and welding reliability are the hard parts of any
+             diamond–metal composite — and aimed at high-power chip cooling for AI servers and high-performance
+             computing. All products are made in Taiwan.</p>
+          <!-- Lead time, cost, performance and efficiency are shown as figures by the
+               .stat-row directly below. Do not restate them as a list here. -->
+          <p style="margin-top:20px">
+            <a class="btn outline" href="../support/contact.html">Request data &amp; samples &rarr;</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><span class="n">600<small>+ W/(m·K)</small></span>
+          <span class="k">Thermal conductivity</span></div>
+        <div class="stat"><span class="n">40<small>%</small></span>
+          <span class="k">Lower cooling energy</span></div>
+        <div class="stat"><span class="n">1/2</span>
+          <span class="k">Lead time vs. competitors</span></div>
+        <div class="stat"><span class="n">40–50<small>% ↓</small></span>
+          <span class="k">Cost vs. global brands</span></div>
+      </div>
+
+      <div class="feature-grid" style="margin-top:34px">
         <div class="feature"><div class="ico">&#9832;</div><h4>High Conductivity</h4>
           <p>Rapidly spreads heat from power devices and semiconductor packages of rising power density.</p></div>
         <div class="feature"><div class="ico">&#9670;</div><h4>CTE Matching</h4>
@@ -43,7 +72,62 @@
          far more effectively than copper, while its low coefficient of thermal expansion stays close to
          that of the die — which helps interface reliability under repeated thermal cycling.</p>
 
-      <h4 style="margin-top:22px">Performance Parameters</h4>
+      <figure class="diagram">
+        <svg viewBox="0 0 760 330" role="img" aria-labelledby="stack-title stack-desc">
+          <title id="stack-title">Chip package heat path cross-section</title>
+          <desc id="stack-desc">From bottom to top: PCB, substrate, die, TIM1, Diamond-Cu lid, TIM2, cold plate. Heat generated at the die escapes upward to the cold plate.</desc>
+
+          <!-- Cold plate -->
+          <rect x="118" y="34" width="524" height="46" rx="5" fill="#cfdcea" stroke="#9fb3c8"/>
+          <text x="150" y="63" font-size="17" font-weight="600" fill="#3d4b5a">Cold plate</text>
+          <g stroke="#0b5cab" stroke-width="3" fill="none">
+            <path d="M360 57 H586"/><path d="M578 49 L590 57 L578 65"/>
+          </g>
+
+          <!-- TIM2 -->
+          <rect x="140" y="82" width="480" height="15" fill="#e0483d"/>
+          <text x="636" y="95" font-size="14" font-weight="600" fill="#b3261e">TIM2</text>
+
+          <!-- Lid (Diamond-Cu): cap spanning the package, legs down to the PCB -->
+          <path d="M140 97 H620 V137 H594 V246 H566 V137 H194 V246 H166 V137 H140 Z" fill="#0b5cab"/>
+          <text x="380" y="124" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Lid</text>
+
+          <!-- Diamond-Cu callout -->
+          <text x="8" y="180" font-size="15" font-weight="800" fill="#b3261e">Diamond-Cu</text>
+          <g stroke="#b3261e" stroke-width="2.5" fill="none">
+            <path d="M112 174 H160"/><path d="M120 166 L110 174 L120 182"/>
+          </g>
+
+          <!-- TIM1 -->
+          <rect x="298" y="137" width="164" height="15" fill="#e0483d"/>
+          <text x="470" y="150" font-size="14" font-weight="600" fill="#b3261e">TIM1</text>
+
+          <!-- Die -->
+          <rect x="290" y="152" width="180" height="58" fill="#8794a6"/>
+          <text x="380" y="188" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Die</text>
+
+          <!-- substrate + solder balls -->
+          <rect x="262" y="210" width="236" height="16" fill="#b9c4d1"/>
+          <g fill="#6b7887">
+            <circle cx="286" cy="234" r="6"/><circle cx="316" cy="234" r="6"/>
+            <circle cx="346" cy="234" r="6"/><circle cx="376" cy="234" r="6"/>
+            <circle cx="406" cy="234" r="6"/><circle cx="436" cy="234" r="6"/>
+            <circle cx="466" cy="234" r="6"/>
+          </g>
+
+          <!-- PCB -->
+          <rect x="96" y="246" width="568" height="32" rx="4" fill="#4a9c5a"/>
+          <text x="380" y="268" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">PCB</text>
+
+          <!-- heat path caption -->
+          <text x="380" y="308" text-anchor="middle" font-size="14" fill="#5b7086">
+            Die → TIM1 → Lid (Diamond-Cu) → TIM2 → Cold plate
+          </text>
+        </svg>
+        <figcaption>Diamond-Cu sits at the lid (heat spreader) position of the chip package.</figcaption>
+      </figure>
+
+      <h4 style="margin-top:26px">Performance Parameters</h4>
       <div class="table-scroll">
       <table class="tbl">
         <thead><tr><th style="width:34%">Parameter</th><th>Diamond-Cu</th></tr></thead>
@@ -55,18 +139,11 @@
       </table>
       </div>
 
-      <h4 style="margin-top:22px">Applications</h4>
-      <ul style="color:var(--ink-2);padding-left:20px;list-style:disc;line-height:1.9">
-        <li>High heat-flux chip package thermal management</li>
-        <li>Heat sinks for power components</li>
-        <li>5G equipment · CPU / GPU · aerospace · laser · power devices for NEVs</li>
-      </ul>
-
-      <div class="table-scroll" style="margin-top:18px">
+      <div class="table-scroll" style="margin-top:26px">
       <table class="tbl">
-        <thead><tr><th style="width:26%">Item</th><th style="width:22%">Maker</th><th>Applications</th></tr></thead>
+        <thead><tr><th style="width:18%">Brand</th><th style="width:30%">Grade</th><th style="width:20%">Manufacturer</th><th>Remarks</th></tr></thead>
         <tbody>
-          <tr><td><span class="main-item">Diamond-Cu</span></td><td>Dynacard</td><td>Semiconductor and power device heat spreading (lid)</td></tr>
+          <tr><td><span class="main-item">DYNACARD</span></td><td>Diamond-Cu</td><td>Dynacard (Taiwan)</td><td>Semiconductor and power device heat spreading (lid)</td></tr>
         </tbody>
       </table>
       </div>
@@ -77,11 +154,21 @@
          and in structural parts for data centres, automotive electronics and other high-heat devices.</p>
       <div class="table-scroll">
       <table class="tbl">
-        <thead><tr><th style="width:26%">Item</th><th style="width:22%">Maker</th><th>Applications</th></tr></thead>
+        <thead><tr><th style="width:18%">Brand</th><th style="width:30%">Grade</th><th style="width:20%">Manufacturer</th><th>Remarks</th></tr></thead>
         <tbody>
-          <tr><td>GR03 Series (high-strength PPS)</td><td>G-FAM</td><td>AI server cooling fans and other high-temperature, high-speed parts</td></tr>
+          <tr><td>G-FAM</td><td>GR03 Series (high-strength PPS)</td><td>G-FAM</td><td>AI server cooling fans and other high-temperature, high-speed parts</td></tr>
         </tbody>
       </table>
+      </div>
+
+      <h3 style="margin-top:34px">Applications</h3>
+      <p>Suited to high heat-flux chip package thermal management and to heat sinks for power components.</p>
+      <div class="app-grid">
+        <div class="app"><b>5G</b><span>Base stations · network equipment</span></div>
+        <div class="app"><b>CPU / GPU</b><span>AI servers · high-performance computing</span></div>
+        <div class="app"><b>Aerospace</b><span>High-reliability electronics</span></div>
+        <div class="app"><b>Laser</b><span>High-power light source cooling</span></div>
+        <div class="app"><b>NEV power devices</b><span>Electric vehicle power modules</span></div>
       </div>
 
       <p style="color:var(--ink-2);font-size:14px;margin-top:22px">

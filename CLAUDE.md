@@ -90,4 +90,49 @@ Two shapes, copy the nearest existing page rather than starting from scratch:
 - **Home** (`index.html`) — `.hero` slider + `.wrap` sections.
 - **Interior** (everything else) — `.page-hero` → `<nav data-breadcrumb>` → `.page-body > .wrap > .sub-layout` containing `<aside data-sidenav>` and `.page-content`. Tables go inside `.table-scroll > table.tbl`.
 
-Product tables share one five-column shape: 구분 / 상표(Brand) / 주요 품목(Grade) / 제조사 / 비고, with `rowspan` merging the 구분 and 상표 cells. `products/overview.html` is the concatenation of the four category tables and must be kept in sync when a category page changes.
+### Headline-product pages
+
+`products/flame.html` and `products/thermal.html` are the two pages built around a headline
+item (SAYTEX ALERO, DYNACARD). They share one block order — keep them in step:
+
+```
+h2 + .lead
+.highlight-card        MAIN ITEM badge, claim, description
+.spec-split            .maker-mark logo → .eyebrow "제품 개요" → h4 → description → .btn.outline
+.stat-row              key figures
+.feature-grid          three characteristic cards
+…page-specific body…   flame: SAYTEX advantages · thermal: stack diagram, spec table
+table.tbl              handling items
+h3 적용 분야 + .app-grid
+footnote
+```
+
+Two rules that exist because both were violated before:
+
+- **`.spec-split`'s `.bullet-list` is an optional slot and must not repeat `.stat-row`.**
+  thermal once listed 납기/가격/성능/효율 there and then restated the same four as figures
+  directly below. flame keeps its list because the per-resin benefits (ABS / PP / PC-ABS)
+  appear nowhere else.
+- **flame's `.stat-row` figures are tallied from its own tables** (18 grades, 7 named
+  manufacturers). Editing those tables invalidates the figures; an HTML comment above the
+  block says so.
+
+`.maker-mark` shows the supplier's own logo — `brand-albemarle.svg` and `brand-dynac.svg`
+are official vectors pulled from albemarle.com and dynacltd.com, not redrawn. The class
+constrains height only (`width: auto`) so a replacement of any aspect ratio drops in safely.
+
+Product tables come in two shapes, and which one applies depends on whether the
+heading above already names the category:
+
+- **4 columns** — 상표(Brand) / 주요 품목(Grade) / 제조사 / 비고, widths `18/30/20/rest`.
+  Used on `products/flame.html`, `additives.html` and `thermal.html`, where each table sits
+  under an `h3` that *is* the category name (브롬계, 산화방지제, 방열 소재 …). A 구분 column
+  here would `rowspan` the same word the heading just said and eat 12–16% of the width.
+- **5 columns** — the above with 구분 in front. Used on `products/overview.html` (four
+  category tables merged into one listing per product group) and `products/resins.html`
+  (single table under the generic heading 취급 수지, so 구분 carries PPE / Polyamide /
+  탄화수소). In both, 구분 is the only thing separating row groups.
+
+`rowspan` still merges the 상표 cells where a brand spans several grades. `overview.html`
+is the concatenation of the four category tables, so keep it in sync when a category page
+changes — including the 구분 values, which must match the category pages' `h3` headings.
