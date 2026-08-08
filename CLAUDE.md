@@ -28,11 +28,24 @@ Every page's HTML contains only `<main id="main">`. The header, footer, breadcru
 
 ### Bump `?v=` on every deploy
 
-`style.css`, the three scripts and `favicon.svg` all carry a `?v=YYYYMMDD` token, and
-`include.js` repeats it in `ASSET_V` for the runtime-injected logos. GitHub Pages serves
-everything with `Cache-Control: max-age=600`, and because the entire header, footer and
-menu are built by the scripts, a cached `nav.js`/`include.js` renders the *whole previous
-site* even when the HTML is fresh — the change looks like it never deployed.
+**Every file under `assets/` that HTML references directly** carries a `?v=` token — CSS,
+all three scripts, and *every image*, including the hero backgrounds inside inline
+`style="background-image:url(...)"`. `include.js` repeats the token in `ASSET_V` for
+`logo.svg` / `logo-white.svg`, which it injects at runtime and which therefore have no
+token in the HTML.
+
+Do not turn that sentence back into a list of filenames. It used to read "style.css, the
+three scripts and favicon.svg", and the thirteen images that the list forgot shipped with
+no token at all — replacing a product image changed the file but not its URL, so phones
+kept showing the old one with nothing in the page to indicate why.
+
+GitHub Pages serves everything with `Cache-Control: max-age=600`, and because the entire
+header, footer and menu are built by the scripts, a cached `nav.js`/`include.js` renders the
+*whole previous site* even when the HTML is fresh — the change looks like it never deployed.
+
+Token format is `YYYYMMDD` plus an optional letter: `20260808`, then `20260808b`, `20260808c`
+for further deploys the same day. The letter exists because a date alone cannot express a
+second deploy, and same-day redeploys are the normal case while iterating.
 
 Bump the token everywhere in one pass before pushing. **Use `sed`, not PowerShell** — the
 pages are UTF-8 without a BOM, and Windows PowerShell 5.1's `Get-Content` decodes them with
@@ -42,10 +55,20 @@ sequences are left alone:
 
 ```bash
 find . -path ./.git -prune -o \( -name '*.html' -o -name 'include.js' \) -print \
-  | xargs sed -i 's/?v=20260808/?v=20260901/g'
+  | xargs sed -i 's/?v=[0-9]\{8\}[a-z]\?/?v=20260901/g'
 ```
 
 If you must use PowerShell, pass `-Encoding UTF8` to **both** `Get-Content` and `Set-Content`.
+
+Then confirm nothing was missed — this must print nothing:
+
+```bash
+grep -rhoE 'assets/(images|css|js)/[A-Za-z0-9._-]+(\?v=[0-9]{8}[a-z]?)?' --include='*.html' . \
+  | grep -v '?v=' | sort -u
+```
+
+Run it after adding any new image. It is the only thing standing between a new asset and
+the silent staleness described above.
 
 - [assets/js/nav.js](assets/js/nav.js) — `window.PLASTECH_NAV`, the **single source of truth** for the menu tree, footer text and contact details, in both `ko` and `en`. Adding, renaming or reordering a page means editing this file; nothing else knows the menu.
 - [assets/js/include.js](assets/js/include.js) — builds header/footer markup from `PLASTECH_NAV`, fills `[data-breadcrumb]` and `[data-sidenav]` elements if the page has them, and computes the language-switch href.
