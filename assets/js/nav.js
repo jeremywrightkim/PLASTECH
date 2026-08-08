@@ -12,20 +12,15 @@ window.PLASTECH_NAV = {
         { id: "company/history",  label: "회사연혁",    href: "company/history.html" },
         { id: "company/location", label: "오시는 길",   href: "company/location.html" }
       ]},
-      { id: "products", label: "제품소개", children: [
+      { id: "products", label: "상품안내", children: [
         { id: "products/overview",  label: "전체 품목",        href: "products/overview.html" },
+        { id: "products/flame",     label: "난연제",           href: "products/flame.html" },
         { id: "products/additives", label: "플라스틱 첨가제",  href: "products/additives.html" },
         { id: "products/resins",    label: "플라스틱 수지",    href: "products/resins.html" },
-        { id: "products/thermal",   label: "열 관리 소재",     href: "products/thermal.html" }
+        { id: "products/thermal",   label: "열관리 소재",      href: "products/thermal.html" }
       ]},
-      { id: "logistics", label: "물류/보관", children: [
-        { id: "logistics/gallery",  label: "갤러리",       href: "logistics/gallery.html" },
-        { id: "logistics/facility", label: "시설 및 장비", href: "logistics/facility.html" }
-      ]},
-      { id: "support", label: "고객센터", children: [
-        { id: "support/notice",   label: "공지사항",           href: "support/notice.html" },
-        { id: "support/new",      label: "신제품 소개",        href: "support/new-product.html" },
-        { id: "support/inquiry",  label: "샘플요청 및 문의",   href: "support/inquiry.html" }
+      { id: "support", label: "고객문의", children: [
+        { id: "support/contact", label: "영업담당자 연락처", href: "support/contact.html" }
       ]}
     ],
     footer: {
@@ -52,18 +47,13 @@ window.PLASTECH_NAV = {
       ]},
       { id: "products", label: "Products", children: [
         { id: "products/overview",  label: "All Items",           href: "products/overview.html" },
+        { id: "products/flame",     label: "Flame Retardants",    href: "products/flame.html" },
         { id: "products/additives", label: "Plastic Additives",   href: "products/additives.html" },
         { id: "products/resins",    label: "Plastic Resins",      href: "products/resins.html" },
         { id: "products/thermal",   label: "Thermal Management",  href: "products/thermal.html" }
       ]},
-      { id: "logistics", label: "Logistics", children: [
-        { id: "logistics/gallery",  label: "Gallery",             href: "logistics/gallery.html" },
-        { id: "logistics/facility", label: "Facility & Equipment",href: "logistics/facility.html" }
-      ]},
-      { id: "support", label: "Customer", children: [
-        { id: "support/notice",  label: "Notice",           href: "support/notice.html" },
-        { id: "support/new",     label: "New Product News", href: "support/new-product.html" },
-        { id: "support/inquiry", label: "Sample & Inquiry", href: "support/inquiry.html" }
+      { id: "support", label: "Contact", children: [
+        { id: "support/contact", label: "Sales Contacts", href: "support/contact.html" }
       ]}
     ],
     footer: {

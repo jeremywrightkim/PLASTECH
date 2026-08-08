@@ -11,7 +11,8 @@ GitHub Pages **for internal review only**.
 >
 > **회사의 실제 홈페이지가 아닙니다.** 대표자명·연락처·주소·제품표·인증·이미지는
 > 모두 레이아웃과 다국어 구조를 검토하기 위한 예시입니다. 인용하거나 외부에
-> 공유하지 마십시오. 문의 폼은 동작하지 않습니다 — 제출해도 전송되지 않습니다.
+> 공유하지 마십시오. (다만 회사 등록정보, 상품 표, 고객문의 페이지의 영업담당자
+> 연락처는 실제 데이터입니다.)
 
 The build injects `<meta name="robots" content="noindex, nofollow, ...">` at
 runtime so it stays out of search results. See the block marked
@@ -20,7 +21,7 @@ the site to launch state.
 
 ## Structure
 
-- `index.html`, `company/`, `products/`, `new/`, `logistics/`, `support/` — Korean
+- `index.html`, `company/`, `products/`, `support/` — Korean
 - `en/` — English mirror, identical filenames
 - `assets/js/nav.js` — menu tree and footer text, both languages (single source of truth)
 - `assets/js/include.js` — injects header, footer, breadcrumb and side nav at runtime
@@ -31,7 +32,7 @@ Every page's HTML contains only `<main id="main">`; the shared chrome is
 generated at runtime from three `<body>` attributes:
 
 ```html
-<body data-lang="ko" data-active="products/solvent" data-root="../">
+<body data-lang="ko" data-active="products/flame" data-root="../">
 ```
 
 - `data-lang` — `ko` or `en`, picks the `PLASTECH_NAV` branch

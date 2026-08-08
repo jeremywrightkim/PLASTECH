@@ -47,16 +47,12 @@
   if (!data) return;
 
   // path of current page relative to its language root
-  var relPath = active === "home" ? "index.html" : active
-      .replace("support/new", "support/new-product")
-      .replace("support/inquiry", "support/inquiry") + ".html";
   // map data-active ids to real files where they differ
   var FILE = {
     "home": "index.html",
-    "support/new": "support/new-product.html",
     "sitemap": "sitemap.html"
   };
-  relPath = FILE[active] || (active + ".html");
+  var relPath = FILE[active] || (active + ".html");
 
   // site-root prefix (KO lives at site root, EN lives at /en/)
   var siteRoot = lang === "en" ? root + "../" : root;
@@ -86,7 +82,7 @@
      the header/footer are built here at runtime — so a stale copy of this file
      or the logo keeps showing the old site. Bump this together with the ?v=
      token in every page's <head> whenever you deploy. */
-  var ASSET_V = "?v=20260726";
+  var ASSET_V = "?v=20260808";
   var logo = siteRoot + "assets/images/logo.svg" + ASSET_V;
   var logoWhite = siteRoot + "assets/images/logo-white.svg" + ASSET_V;
   var brandAlt = "PLASTECH Service (PTS)";

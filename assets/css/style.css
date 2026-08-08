@@ -133,6 +133,23 @@ p { margin: 0 0 1em; }
 .slide-inner { position: relative; z-index: 6; color: #fff; max-width: 620px; }
 .slide-inner .eyebrow { display:inline-block; font-size: 13px; letter-spacing: 3px; font-weight: 700; color: #8fd4ff; margin-bottom: 14px; }
 .slide-inner h2 { font-size: clamp(28px, 4.4vw, 50px); line-height: 1.15; margin-bottom: 16px; text-shadow: 0 2px 16px rgba(0,0,0,.25); }
+/* Brand-led headline: the product name is the largest thing on the slide and the
+   Korean/English strapline drops to a supporting line beneath it. Sizes are em so
+   they ride the h2's clamp() and stay in proportion down to mobile. */
+.slide-inner h2 .brand {
+  display: block; font-size: 1.16em; font-weight: 800; letter-spacing: 1.5px;
+  text-shadow: 0 2px 20px rgba(0,0,0,.38);
+}
+/* vertical-align is reset to baseline so the offset comes from `top` alone —
+   the browser default `super` would otherwise stack on top of it. */
+.slide-inner h2 .brand sup {
+  font-size: .42em; letter-spacing: 0;
+  vertical-align: baseline; position: relative; top: -.78em;
+}
+.slide-inner h2 .sub {
+  display: block; margin-top: 12px; font-size: .56em; font-weight: 600;
+  line-height: 1.32; color: #e8f1fb;
+}
 .slide-inner p { font-size: clamp(15px, 1.6vw, 19px); color: #e3edf8; margin-bottom: 26px; text-shadow: 0 1px 10px rgba(0,0,0,.35); }
 .slide-cta {
   display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff;
@@ -254,6 +271,33 @@ section { padding: 72px 0; }
 .tbl thead th { background: var(--brand); color: #fff; font-weight: 700; }
 .tbl tbody tr:nth-child(even) { background: var(--bg-soft); }
 .table-scroll { overflow-x: auto; }
+/* Headline grade inside a table (SAYTEX ALERO, Dynacard Diamond-Cu).
+   Marked per cell, not per row: 구분/상표 cells are rowspan-merged from the row
+   above, so a row background would only paint the trailing columns and read as
+   a misaligned stripe. The badge sits on the grade itself and is unaffected. */
+.tbl .main-item { font-weight: 800; color: var(--brand-dark); }
+.tbl .main-item::after {
+  content: "MAIN"; display: inline-block; margin-left: 8px;
+  padding: 1px 7px; border-radius: 20px;
+  background: var(--brand); color: #fff;
+  font-size: 10px; font-weight: 800; letter-spacing: 1px;
+  vertical-align: 2px; line-height: 1.6;
+}
+
+/* highlight card — main emphasised item at the top of a product page */
+.highlight-card {
+  border: 1px solid var(--brand); border-left: 5px solid var(--brand);
+  border-radius: var(--radius); background: var(--brand-light);
+  padding: 26px 28px; box-shadow: var(--shadow);
+}
+.highlight-card .tag {
+  display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 2px;
+  color: #fff; background: var(--brand); padding: 4px 12px; border-radius: 20px;
+}
+.highlight-card h3 { margin: 14px 0 4px; font-size: 26px; color: var(--brand-dark); }
+.highlight-card .maker { color: var(--brand); font-weight: 700; font-size: 14.5px; margin-bottom: 12px; }
+.highlight-card p { color: var(--ink-2); margin: 0; font-size: 15px; line-height: 1.8; }
+.highlight-card p b { color: var(--ink); }
 
 /* history timeline */
 .timeline { border-left: 3px solid var(--line); margin-left: 10px; padding-left: 30px; }
@@ -262,13 +306,6 @@ section { padding: 72px 0; }
 .timeline .year { font-size: 22px; font-weight: 800; color: var(--brand); margin-bottom: 8px; }
 .timeline .row { display: flex; gap: 14px; margin-bottom: 4px; }
 .timeline .row .m { font-weight: 700; color: var(--ink); flex: none; width: 44px; }
-
-/* gallery */
-.gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-.gallery-grid figure { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-.gallery-grid img { aspect-ratio: 4/3; object-fit: cover; transition: transform .4s; }
-.gallery-grid figure:hover img { transform: scale(1.06); }
-.gallery-grid figcaption { padding: 12px 16px; font-size: 14px; color: var(--ink-2); background:#fff; }
 
 /* info cards / feature list */
 .feature-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
@@ -312,7 +349,7 @@ section { padding: 72px 0; }
 .agree { display: flex; align-items: center; gap: 8px; font-size: 14px; }
 
 /* sitemap */
-.sitemap-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 24px; }
+.sitemap-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 .sitemap-col h3 { font-size: 17px; color: var(--brand); border-bottom: 2px solid var(--brand); padding-bottom: 10px; margin-bottom: 12px; }
 .sitemap-col a { display: block; padding: 7px 0; color: var(--ink-2); font-size: 14px; }
 .sitemap-col a:hover { color: var(--brand); }
@@ -339,7 +376,7 @@ section { padding: 72px 0; }
 @media (max-width: 980px) {
   .split, .ceo, .sub-layout { grid-template-columns: 1fr; }
   .quick-grid, .prod-grid { grid-template-columns: repeat(2,1fr); }
-  .feature-grid, .gallery-grid { grid-template-columns: repeat(2,1fr); }
+  .feature-grid { grid-template-columns: repeat(2,1fr); }
   .sitemap-grid { grid-template-columns: repeat(2,1fr); }
   .side-nav { position: static; }
   .footer-top { grid-template-columns: 1fr 1fr; }
@@ -385,7 +422,7 @@ section { padding: 72px 0; }
   body.nav-open .site-header { z-index: 160; }
   /* stop the page behind the drawer from scrolling */
   body.nav-open { overflow: hidden; }
-  .quick-grid, .prod-grid, .feature-grid, .gallery-grid, .form-grid, .footer-top, .sitemap-grid { grid-template-columns: 1fr; }
+  .quick-grid, .prod-grid, .feature-grid, .form-grid, .footer-top, .sitemap-grid { grid-template-columns: 1fr; }
   section { padding: 52px 0; }
   .footer-bottom { justify-content: center; text-align: center; }
   /* Copy spans the full width on phones, so the scrim runs top-to-bottom
