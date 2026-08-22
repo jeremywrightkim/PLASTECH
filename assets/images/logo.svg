@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 68" width="196" height="68"
-     role="img" aria-label="PTS — plastech service inc.">
-  <title>PTS — plastech service inc.</title>
+     role="img" aria-label="PTS — Plastech service Inc.">
+  <title>PTS — Plastech service Inc.</title>
   <!-- viewBox is trimmed to the letterforms so the mark sits flush left in the
        header; earlier versions carried ~100px of empty canvas on the left.
        textLength pins each line's width so the lockup renders identically
@@ -12,5 +12,5 @@
   <text x="192" y="62" text-anchor="end" textLength="188" lengthAdjust="spacingAndGlyphs"
         font-family="Arial, Helvetica, 'Segoe UI', sans-serif"
         font-size="17.5" font-weight="400"
-        fill="#2f4f9e">plastech service inc.</text>
+        fill="#2f4f9e">Plastech service Inc.</text>
 </svg>

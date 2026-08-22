@@ -82,10 +82,10 @@
      the header/footer are built here at runtime — so a stale copy of this file
      or the logo keeps showing the old site. Bump this together with the ?v=
      token in every page's <head> whenever you deploy. */
-  var ASSET_V = "?v=20260808b";
+  var ASSET_V = "?v=20260822";
   var logo = siteRoot + "assets/images/logo.svg" + ASSET_V;
   var logoWhite = siteRoot + "assets/images/logo-white.svg" + ASSET_V;
-  var brandAlt = "PLASTECH Service (PTS)";
+  var brandAlt = "Plastech service Inc. (PTS)";
 
   var header =
     '<a href="#main" class="skip-link">본문 바로가기</a>' +
@@ -124,8 +124,7 @@
           "<li>" + f.addr + "</li>" +
           "<li><b>TEL</b> " + f.tel + " &nbsp; <b>FAX</b> " + f.fax + "</li>" +
           (f.email ? "<li><b>E-MAIL</b> " + f.email + "</li>" : "") +
-          "<li><b>" + f.ceoLabel + "</b> " + f.ceo +
-            " &nbsp; <b>" + f.bizLabel + "</b> " + f.bizno + "</li>" +
+          "<li><b>" + f.ceoLabel + "</b> " + f.ceo + "</li>" +
         "</ul></div>" +
       "</div>" +
       '<div class="footer-bottom"><span>' + f.copyright + "</span>" +

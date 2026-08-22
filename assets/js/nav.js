@@ -29,7 +29,6 @@ window.PLASTECH_NAV = {
       tel: "02-501-5775", fax: "02-501-5749", email: "",
       legalName: "플라스텍서비스(주)",
       ceoLabel: "대표", ceo: "박상각",
-      bizLabel: "사업자등록번호", bizno: "220-86-47146",
       quickTitle: "바로가기", contactTitle: "오시는 길 · 연락처",
       copyright: "COPYRIGHT © 2026 플라스텍서비스(주) ALL RIGHTS RESERVED."
     }
@@ -57,14 +56,13 @@ window.PLASTECH_NAV = {
       ]}
     ],
     footer: {
-      about: "PLASTECH Service (PTS) has supplied plastic additives and chemical materials since 1998 — from flame retardants, heat stabilizers and flow processing aids through to biodegradable and thermal management materials.",
+      about: "Plastech service Inc. (PTS) has supplied plastic additives and chemical materials since 1998 — from flame retardants, heat stabilizers and flow processing aids through to biodegradable and thermal management materials.",
       addr: "#1910, Anam Tower, 311 Teheran-ro, Gangnam-gu, Seoul, Korea",
       tel: "+82-2-501-5775", fax: "+82-2-501-5749", email: "",
-      legalName: "PLASTECH SERVICE CO., LTD.",
+      legalName: "Plastech service Inc.",
       ceoLabel: "CEO", ceo: "Sang-gak Park",
-      bizLabel: "Business Reg. No.", bizno: "220-86-47146",
       quickTitle: "Quick Links", contactTitle: "Location · Contact",
-      copyright: "COPYRIGHT © 2026 PLASTECH SERVICE CO., LTD. ALL RIGHTS RESERVED."
+      copyright: "COPYRIGHT © 2026 Plastech service Inc. ALL RIGHTS RESERVED."
     }
   }
 };
