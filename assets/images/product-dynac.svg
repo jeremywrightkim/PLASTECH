@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" preserveAspectRatio="xMidYMid slice">
-  <!-- DYNAC Cu-Diamond heat spreader, 3:4 portrait to match .spec-split .visual.
-       A lidded spreader plate with a machined rim and the official DYNAC wordmark
+  <!-- DYNAC Cu-Diamond heat sink, 3:4 portrait to match .spec-split .visual.
+       A lidded heat sink plate with a machined rim and the official DYNAC wordmark
        etched on the face, matching the supplier's product photography.
 
        The plate itself is placeholder artwork in our own palette; swap it for real
@@ -25,7 +25,7 @@
 
   <rect width="600" height="800" fill="url(#bg)"/>
 
-  <!-- spreader plate: drop shadow, outer body, machined rim, recessed face -->
+  <!-- heat sink plate: drop shadow, outer body, machined rim, recessed face -->
   <rect x="86" y="176" width="428" height="428" rx="14" fill="#8f9dab" opacity="0.35"/>
   <rect x="78" y="166" width="428" height="428" rx="14" fill="url(#plate)"/>
   <rect x="106" y="194" width="372" height="372" rx="8" fill="none" stroke="#8f9dab" stroke-width="3"/>
@@ -67,7 +67,7 @@
   <!-- caption band -->
   <rect x="0" y="656" width="600" height="88" fill="url(#band)"/>
   <text x="40" y="700" font-family="Segoe UI, Malgun Gothic, sans-serif"
-        font-size="24" font-weight="800" fill="#ffffff" letter-spacing="1">Heat Spreader</text>
+        font-size="24" font-weight="800" fill="#ffffff" letter-spacing="1">Heat Sink</text>
   <text x="40" y="728" font-family="Segoe UI, Malgun Gothic, sans-serif"
         font-size="15" font-weight="600" fill="#8fd4ff" letter-spacing="1">Cu-Diamond composite · Lid</text>
 </svg>
