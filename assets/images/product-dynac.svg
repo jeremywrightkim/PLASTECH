@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" preserveAspectRatio="xMidYMid slice">
-  <!-- DYNACARD Diamond-Cu heat spreader, 3:4 portrait to match .spec-split .visual.
+  <!-- DYNAC Cu-Diamond heat spreader, 3:4 portrait to match .spec-split .visual.
        A lidded spreader plate with a machined rim and the official DYNAC wordmark
        etched on the face, matching the supplier's product photography.
 
@@ -62,12 +62,12 @@
   <use href="#etch" transform="translate(53.9,340.2) scale(2.05)" fill="#39454f"/>
 
   <text x="292" y="452" text-anchor="middle" font-family="Segoe UI, Malgun Gothic, Arial, sans-serif"
-        font-size="18" font-weight="600" letter-spacing="5" fill="#6b7887">DIAMOND-Cu</text>
+        font-size="18" font-weight="600" letter-spacing="5" fill="#6b7887">Cu-DIAMOND</text>
 
   <!-- caption band -->
   <rect x="0" y="656" width="600" height="88" fill="url(#band)"/>
   <text x="40" y="700" font-family="Segoe UI, Malgun Gothic, sans-serif"
         font-size="24" font-weight="800" fill="#ffffff" letter-spacing="1">Heat Spreader</text>
   <text x="40" y="728" font-family="Segoe UI, Malgun Gothic, sans-serif"
-        font-size="15" font-weight="600" fill="#8fd4ff" letter-spacing="1">Diamond-Cu composite · Lid</text>
+        font-size="15" font-weight="600" fill="#8fd4ff" letter-spacing="1">Cu-Diamond composite · Lid</text>
 </svg>
