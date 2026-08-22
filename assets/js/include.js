@@ -82,7 +82,7 @@
      the header/footer are built here at runtime — so a stale copy of this file
      or the logo keeps showing the old site. Bump this together with the ?v=
      token in every page's <head> whenever you deploy. */
-  var ASSET_V = "?v=20260822c";
+  var ASSET_V = "?v=20260822d";
   var logo = siteRoot + "assets/images/logo.svg" + ASSET_V;
   var logoWhite = siteRoot + "assets/images/logo-white.svg" + ASSET_V;
   var brandAlt = "Plastech service Inc. (PTS)";

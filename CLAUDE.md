@@ -79,8 +79,9 @@ the silent staleness described above.
 Three groups: `company` (회사소개), `products` (상품안내 / Products) and `support` (고객문의 / Contact).
 `products` has five children — `overview`, `flame`, `additives`, `resins`, `thermal`; **SAYTEX ALERO**
 on the flame page and **DYNACARD** on the thermal page are the two headline items, marked up with
-`.highlight-card` (the card above the tables) and `span.main-item` (the grade cell inside a table —
-per cell, never per row, because `rowspan`-merged cells can't take a row background).
+`.highlight-card` — the card above the tables. Their grade cells inside the tables are plain text:
+the `span.main-item` wrapper that painted a "MAIN" pill via `::after`, and the card's own
+`MAIN ITEM` badge, were both removed along with their CSS. Do not reintroduce either.
 `support` has a single child, `support/contact.html`.
 There is no logistics group and no notice/inquiry-form page.
 
@@ -120,7 +121,7 @@ item (SAYTEX ALERO, DYNACARD). They share one block order — keep them in step:
 
 ```
 h2 + .lead
-.highlight-card        MAIN ITEM badge, claim, description
+.highlight-card        claim, description
 .spec-split            .maker-mark logo → .eyebrow "제품 개요" → h4 → description → .btn.outline
 .stat-row              key figures
 .feature-grid          three characteristic cards

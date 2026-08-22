@@ -283,28 +283,12 @@ a.facility-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-
 .tbl thead th { background: var(--brand); color: #fff; font-weight: 700; }
 .tbl tbody tr:nth-child(even) { background: var(--bg-soft); }
 .table-scroll { overflow-x: auto; }
-/* Headline grade inside a table (SAYTEX ALERO, Dynacard Diamond-Cu).
-   Marked per cell, not per row: 구분/상표 cells are rowspan-merged from the row
-   above, so a row background would only paint the trailing columns and read as
-   a misaligned stripe. The badge sits on the grade itself and is unaffected. */
-.tbl .main-item { font-weight: 800; color: var(--brand-dark); }
-.tbl .main-item::after {
-  content: "MAIN"; display: inline-block; margin-left: 8px;
-  padding: 1px 7px; border-radius: 20px;
-  background: var(--brand); color: #fff;
-  font-size: 10px; font-weight: 800; letter-spacing: 1px;
-  vertical-align: 2px; line-height: 1.6;
-}
 
-/* highlight card — main emphasised item at the top of a product page */
+/* highlight card — the headline item at the top of a product page */
 .highlight-card {
   border: 1px solid var(--brand); border-left: 5px solid var(--brand);
   border-radius: var(--radius); background: var(--brand-light);
   padding: 26px 28px; box-shadow: var(--shadow);
-}
-.highlight-card .tag {
-  display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 2px;
-  color: #fff; background: var(--brand); padding: 4px 12px; border-radius: 20px;
 }
 .highlight-card h3 { margin: 14px 0 4px; font-size: 26px; color: var(--brand-dark); }
 .highlight-card .maker { color: var(--brand); font-weight: 700; font-size: 14.5px; margin-bottom: 12px; }
